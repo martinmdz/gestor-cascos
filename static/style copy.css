@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #2c3e50;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;   /* 👈 hace que quede fijo a la izquierda */
+  top: 0;
+  left: 0;
+}
+
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #34495e;
+}
+
+/* Navbar */
+.navbar {
+  background: #2980b9;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  right: 0;
+  display: flex;              /* 👈 usamos flexbox */
+  justify-content: space-between; /* 👈 separa título y botón */
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar form {
+  margin: 0;
+}
+
+.navbar form button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar form button:hover {
+  background: #c0392b;
+}
+👉
+
+/* Contenido */
+
+.content {
+  margin-left: 200px;   /* deja espacio para el sidebar */
+  margin-top: 80px;    /* deja espacio para el navbar */
+  margin-bottom: 60px;  /* deja espacio para el footer */
+  padding: 20px;
+}
+
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 200px;  /* 👈 respeta el ancho del sidebar */
+  right: 0;
+}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Préstamos{% endblock %}
+{% block content %}
+<h2>Registrar Préstamo</h2>
+
+<form method="POST" action="{{ url_for('prestar') }}">
+  <label for="casco_id">Seleccionar casco:</label>
+  <select name="casco_id" required>
+    {% for casco in cascos %}
+      {% if not casco.prestado %}
+        <option value="{{ casco.id }}">{{ casco.nombre }} (Geles: {{ casco.geles }})</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+
+  <label for="usuario_id">Seleccionar usuario:</label>
+  <select name="usuario_id" required>
+    {% for usuario in usuarios %}
+      <option value="{{ usuario.id }}">{{ usuario.nombre }}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit">Prestar</button>
+</form>
+
+<hr>
+
+<h3>Listado de préstamos actuales</h3>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Casco</th>
+    <th>Usuario</th>
+    <th>Acción</th>
+  </tr>
+  {% for casco in cascos %}
+    {% if casco.prestado %}
+      <tr>
+        <td>{{ casco.nombre }} (Geles: {{ casco.geles }})</td>
+        <td>
+          {% for usuario in usuarios %}
+            {% if usuario.id == casco.usuario %}
+              {{ usuario.nombre }}
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td>
+          <form method="POST" action="{{ url_for('devolver') }}" onsubmit="return confirm('¿Seguro que quieres devolver este casco?');">
+            <input type="hidden" name="casco_id" value="{{ casco.id }}">
+            <button type="submit">Devolver</button>
+          </form>
+        </td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% endblock %}

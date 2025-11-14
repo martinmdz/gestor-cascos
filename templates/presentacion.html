@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='presentacion.css') }}">
+</head>
+<body>
+  <div class="content" style="margin:50px;">
+    <h1>Sistema de Gestión de Cascos y Geles</h1>
+    <p>Este sistema permite administrar inventario, usuarios, préstamos y estadísticas.</p>
+    <p>Para comenzar, regístrate como administrador o inicia sesión si ya tienes cuenta.</p>
+    <a href="{{ url_for('registro') }}"><button>Registrarse</button></a>
+    <a href="{{ url_for('login') }}"><button>Iniciar Sesión</button></a>
+  </div>
+</body>
+</html>

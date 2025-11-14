@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Estadísticas{% endblock %}
+{% block content %}
+<h2>Estadísticas</h2>
+
+<p>Total de cascos: {{ total }}</p>
+<p>Prestados: {{ prestados }}</p>
+<p>Disponibles: {{ disponibles }}</p>
+
+<canvas id="cascosChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('cascosChart').getContext('2d');
+  const cascosChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Prestados', 'Disponibles'],
+      datasets: [{
+        label: 'Cantidad de cascos',
+        data: [{{ prestados }}, {{ disponibles }}],
+        backgroundColor: ['#e74c3c', '#2ecc71']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      }
+    }
+  });
+</script>
+{% endblock %}

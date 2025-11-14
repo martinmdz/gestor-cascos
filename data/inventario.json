@@ -1,0 +1,63 @@
+{
+    "cascos": [
+        {
+            "id": 1,
+            "nombre": "casco1",
+            "geles": 5,
+            "prestado": false,
+            "usuario": null
+        }
+    ],
+    "usuarios": [],
+    "administradores": [
+        {
+            "id": 1,
+            "nombre": "martin",
+            "dni": "35622195",
+            "correo": "martinmorenomsr@gmail.com",
+            "password": "scrypt:32768:8:1$b2qSNg5YEvA36C7d$9f22ff7675fd24ba6eca79a9c735cd577346dbddbbefced409a5e477717d842afc8aab0dfc70abfafc97499a50ae16ce076ba2be91ede9ac0528c2dc6bff0b30"
+        },
+        {
+            "id": 2,
+            "nombre": "martin",
+            "dni": "35622195",
+            "correo": "martinmorenomsr@gmail.com",
+            "password": "scrypt:32768:8:1$3ybQi3GZxuJBTgq2$d33b0ec65000ce260b6c5392a7577fc64e4de7046c48dac65e7511e2896a470099511e87f1865b08ac970e214c40fc9def8a0a64d18373faa88a577aa59ace64"
+        },
+        {
+            "id": 3,
+            "nombre": "martin",
+            "dni": "35622195",
+            "correo": "martinmorenomsr@gmail.com",
+            "password": "scrypt:32768:8:1$6DKAJ3SgNSlKpA4v$fb23eb4b2c3cedc5f1518e10e3a505490934fc576fdfae9bcecb67920ee22768eb836983082e845feb7397cf328ce4ba392d21d7fce6c01c96f195ddc9460891"
+        },
+        {
+            "id": 4,
+            "nombre": "Luca",
+            "dni": "43213452",
+            "correo": "lucamartinez@gmail.com",
+            "password": "scrypt:32768:8:1$rGtTDwkq54B9BZO6$2beef33e39ba392dfd5efb8cddd9907e71ae02174e265e5bc0f98de0984290d6c63f5cc958663219378c45de347c1f3c4eeced2bcd033b00b8ae86e6debe4eae"
+        },
+        {
+            "id": 5,
+            "nombre": "Luca",
+            "dni": "43213452",
+            "correo": "lucamartinez@gmail.com",
+            "password": "scrypt:32768:8:1$VaMR5U3SSlPiTT8F$34536cb65bf7b5d4ab1aca803019dbdadee46006dedc2287445f33e336f3cab649573ef7908ab5cba0db5f3f1bded3e9d9898479b5dc387e9a5f85ad8f25d8b0"
+        },
+        {
+            "id": 6,
+            "nombre": "Luca",
+            "dni": "40123453",
+            "correo": "lucamartinez@gmail.com",
+            "password": "scrypt:32768:8:1$RZaF3LvDRxmxonE6$cdd21d5ba056aee3d3755312fbfa254f95596fea76d1074ec5a764303a82496ed630476388a1fa4f976fa3279f1455d47659b182479511841d393c9de426248c"
+        },
+        {
+            "id": 7,
+            "nombre": "Luca",
+            "dni": "40123453",
+            "correo": "lucamartinez@gmail.com",
+            "password": "scrypt:32768:8:1$TWUbFfT4QK8EJ8Gi$a7241715a242bfb386cc2a4834f14db9d1185aec23bfaa0bdcc4711df40298a2316246b029f8a67e2eae92d61017c7b615eddcf9f0343ae344cf1e2c06529e84"
+        }
+    ]
+}
